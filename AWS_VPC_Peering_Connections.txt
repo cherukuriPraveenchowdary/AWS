@@ -1,0 +1,46 @@
+VPC Peering:
+A VPC peering connection is a networking connection between two VPCs that 
+enables you to route traffic between them using private IPv4 addresses or IPv6 addresses. 
+Instances in either VPC can communicate with each other as if they are within the same network
+
+> VPC Peering works on "Same region" / "Different region" / "Different Account"
+
+Note: VPC CIDR Block must be different
+
+Here i'm taking two VPCs 
+  1. VPC1 > 10.1.0.0/16
+  2. VPC2 > 10.2.0.0/16
+
+Step 1: 
+  > Go to VPC Peering (EC2 > Peering Connections) 
+
+Step 2:
+  > Give the Proper Name in the section 'Peering connection name tag'
+
+Step 3:
+  > Now seclect the VPC Requster (FROM) (VPC1) 
+
+Step 4:
+  > In this step select Same Account/Different Account and Same Region/Different Region.
+
+Step 5:
+  > Now Select the VPC Accepter (TO) (VPC2)
+
+Step 6:
+  > Now goto the Accepter Account And Accept the Peering Connection (Select Peering Connection And Click On 'Actions' Accept Request)
+
+Step 7:
+  > Now go the VPC1 Route table  add Route VPC2 CIDR Block address (10.2.0.0/16) and select Target Column 'Peering Connection ID'.
+  > Same Like Add CIDR Block Addrees in VPC2 Route table.
+
+
+
+
+
+
+
+
+
+
+
+
