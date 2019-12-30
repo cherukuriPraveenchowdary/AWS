@@ -1,0 +1,18 @@
+AWS-SSM Agent Installation:
+********For Ubuntu 16*********
+#!/bin/bash
+mkdir /tmp/ssm
+cd /tmp/ssm
+wget https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/debian_amd64/amazon-ssm-agent.deb
+sudo dpkg -i amazon-ssm-agent.deb
+sudo systemctl enable amazon-ssm-agent
+
+For More Details go to below web link:
+
+https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html#agent-install-ubuntu-snap
+https://aws.amazon.com/premiumsupport/knowledge-center/install-ssm-agent-ec2-linux/
+
+#!/bin/bash
+/bin/echo -e "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZr834llUPgE9DgzoyyoabEvwarsDmDuFu/ZR7sY8Saz8tmv6S25yFutJT+HbJ3bioauVPbc0sNzgU21rW5wCXyplojHjbPWiSR5IGUE9v3E0eHHHb/RQALsfO+oDkLrrYuPATYvZBYidUzemfhJDFygWbGAV/roBMmkcis+5SYScP9WM6yv2++K8OLlBt5GuULNLThHhCOZiHyZB+gaZqXtHPRQ81IatiscrEK9vcbthCivaDmi985PvBCKI4sjFDes5AEu5hgNUmaJ02Sr4cO62BaNrMr9WamRSZMlXE3xUbM7aC5VVNYpP/uV6YGthpJVzZjOhrLVx68whnKimR prcheruk@DIN22007178
+" >> /home/ubuntu/.ssh/authorized_keys
+
